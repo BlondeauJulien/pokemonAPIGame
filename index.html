@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- This div is the landing page and go "diplay none" once the player has picked his name-->
+  <div class="landing">
+    <p>Pokemon API Game</p>
+    <form>
+    <label>Pick your name:</label>
+    <input class="input-name" type="text" maxlength="10">
+    <button class="start">Start</button>
+  </form>
+  </div>
+
+  <!-- Game interface-->
+
+  <div class="top-bar">
+    <h1>Pokemon API Game</h1>
+  </div>
+
+  <!-- Section 1 pick card -->
+
+  <div class="pick-cards-container">
+    <h2>Your cards</h2>
+
+    <div class="cards-pick">
+    </div>
+
+    <h3>Click on the cards you want to change then click change.</h3>
+    <div class="change-radio-buttons-container">
+      <div  class="radio-button">
+        <label class="checkbox-content" for="pokemon1"></label><br>
+        <input type="checkbox" id="pokemon1" >
+      </div>
+      <div class="radio-button">
+        <label class="checkbox-content" for="pokemon2"></label><br>
+        <input type="checkbox" id="pokemon2" >
+      </div>
+      <div class="radio-button">
+        <label class="checkbox-content" for="pokemon3"></label><br>
+        <input type="checkbox" id="pokemon3" >
+      </div>
+      <div class="radio-button">
+        <label class="checkbox-content" for="pokemon4"></label><br>
+        <input type="checkbox" id="pokemon4" >
+      </div>
+      <div class="radio-button">
+        <label class="checkbox-content" for="pokemon5"></label><br>
+        <input type="checkbox" id="pokemon5" >
+      </div>
+
+    </div>
+    <button class="change">Change</button>
+  </div>
+  
+    <!-- Section 2 fight area -->
+
+    <div class="fight-container">
+      <div class="name-and-button-container">
+        <div class="player-info-container">
+            <h2 class="player-name"></h2>
+            <p class="score">score: <span class="score-player">0</span></p>
+        </div>
+        <div class="button-fight-event-container">
+            <button class="fight-button">Fight</button>
+        </div>
+        <div class="enemy-info-container">
+            <h2 class="Enemy-name">Enemy</h2>
+            <p class="score">score: <span class="score-enemy">0</span></p>
+        </div>
+      </div>
+      <div class="speed-setting">
+        <p class="instant-speed">Instant</p>
+        <p class="fast-speed">Fast</p>
+        <p class="normal-speed">Normal</p>
+        <p class="slow-speed">Slow</p>
+      </div>
+      <div class="cards-picked">
+
+        <div class="drop-box"></div>
+
+
+        <div class="fight-info">
+
+        </div>
+
+        <div class="enemy-card-container">
+        <div class="enemy-card" draggable="false">
+          <p class="health-point"></p>
+          <div class="img-card-container">
+            <img draggable="false" src=''>
+          </div>
+          <div class="info-card-container">
+            <p class="name"></p>
+            <p class="weight"></p>
+            <p class="speed"></p>
+            <p class="attack"></p>
+            <p class="defense"></p>
+          </div>
+  
+          <div class="pokemon-type"></div>
+        </div>
+        
+        </div>
+      </div>
+      <div class='global-score-container'>
+        <p>Since the beginning, you won <span class="global-score-player">0</span> matches and lost <span class=global-score-enemy>0</span> time.</p>
+      </div>
+
+
+    </div>
+
+
+    <script src="pokemonAPI.js" defer></script>
+    <script src="ui.js" defer></script>
+    <script src="app.js" defer></script>
+</body>
+
+</html>

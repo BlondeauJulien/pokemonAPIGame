@@ -1,0 +1,476 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    -webkit-user-select: none;  
+    -moz-user-select: none;     
+    -ms-user-select: none;      
+
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ######## Mon Code ############## */
+
+
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+/* color palette https://colorhunt.co/palette/134419*/
+
+/*++++++++++++++ Global +++++++++++++++*/
+
+html {
+    min-width: 1100px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+
+/* ++++++++++ Landing ++++++++++++*/
+
+.landing {
+    position: fixed;
+    display: flex; /*flex*/
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: rgb(255,231,154);
+    background: radial-gradient(circle, #ffe79a 0%, #fedf7b 100%); 
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.landing p {
+    color: #4a67d3;
+    font-size: 2.5rem;
+    font-family: 'Lobster', cursive;
+    margin-bottom: 50px;
+}
+
+.landing input {
+    padding: 5px 5px;
+}
+
+.landing label {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+
+}
+
+
+.start {
+    background: #788edb;
+    background-image: -webkit-linear-gradient(top, #788edb, #2f3e75);
+    background-image: -moz-linear-gradient(top, #788edb, #2f3e75);
+    background-image: -ms-linear-gradient(top, #788edb, #2f3e75);
+    background-image: -o-linear-gradient(top, #788edb, #2f3e75);
+    background-image: linear-gradient(to bottom, #788edb, #2f3e75);
+    -webkit-border-radius: 5;
+    -moz-border-radius: 5;
+    border-radius: 5px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 30px 10px 30px;
+    margin-top: 30px;
+    text-decoration: none;
+}
+  
+.start:hover {
+    background: #91a5e6;
+    background-image: -webkit-linear-gradient(top, #91a5e6, #3d529e);
+    background-image: -moz-linear-gradient(top, #91a5e6, #3d529e);
+    background-image: -ms-linear-gradient(top, #91a5e6, #3d529e);
+    background-image: -o-linear-gradient(top, #91a5e6, #3d529e);
+    background-image: linear-gradient(to bottom, #91a5e6, #3d529e);
+    text-decoration: none;
+}
+
+
+/* ############ Game Interface ########## */
+
+/* ++++++++++++++++ Top Bar ++++++++++++++ */
+
+.top-bar {
+    background-color: #ef5a5a;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-family: 'Lobster', cursive;
+    color: #4a67d3;
+    padding: 30px 30px;
+}
+
+
+/* ++++++++++++++ Pick Your Card Div +++++++++++++++++ */
+
+.pick-cards-container {
+    background-color: #ebcd6e;
+    width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.3rem;
+    padding-top: 20px;
+}
+
+.cards-pick, .cards-picked {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: flex-start;
+    min-height: 100px;
+}
+
+.card, .card-picked, .enemy-card {
+    background-color: #b9d7ea;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    width: 200px;
+    height: 275px;
+    border: solid 1px #1d6d9e;
+    border-radius: 10px;
+    margin: 20px 10px;
+}
+
+.health-point {
+    margin: 5px 30px;
+    text-align: left;
+}
+
+
+.img-card-container {
+    background-color: #d6e6f2;
+    border: solid 1px #769fcd;
+    border-radius: 5px;
+    width: 75%;
+    margin: auto;
+}
+
+.card .img-card-container img, .enemy-card .img-card-container img {
+    display:block;
+    width: 75px;
+    height: 75px;
+    margin: auto; 
+}
+
+
+.info-card-container p {
+    display: block;
+    text-align: left;
+    width: 140px;
+    height: auto;
+    display: block;
+    margin: 5px auto;
+    padding: 0;
+}
+
+
+.pokemon-type {
+    width: auto;
+    display: block;
+    margin: 0px 10px;
+}
+
+.pokemon-type div {
+    font-size: 1rem;
+    display: inline-block;
+    border: solid 1px #769fcd;
+    border-radius: 5px;
+    padding: 3px 5px;
+    margin-bottom: 2px;
+    background-color: #d5e8fd;
+}
+
+.fight-button, .next-fight-button, .new-match {
+    display: inline-block;
+    margin: 0px 10px;
+}
+
+.change, .next-fight-button {
+    margin: auto;
+    background-image: -webkit-linear-gradient(top, #8094df, #4e5d96);
+    background-image: -moz-linear-gradient(top, #8094df, #4e5d96);
+    background-image: -ms-linear-gradient(top, #8094df, #4e5d96);
+    background-image: -o-linear-gradient(top, #8094df, #4e5d96);
+    background-image: linear-gradient(to bottom, #8094df, #4e5d96);
+    -webkit-border-radius: 5;
+    -moz-border-radius: 5;
+    border-radius: 5px;
+    border: none;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+}
+
+.change:hover, .next-fight-button:hover {
+    background-image: -webkit-linear-gradient(top, #4e5d96, #8094df);
+    background-image: -moz-linear-gradient(top, #4e5d96, #8094df);
+    background-image: -ms-linear-gradient(top, #4e5d96, #8094df);
+    background-image: -o-linear-gradient(top, #4e5d96, #8094df);
+    background-image: linear-gradient(to bottom, #4e5d96, #8094df);
+}
+
+.fight-button {
+    background-image: -webkit-linear-gradient(top, #ec7f7f, #e72323);
+    background-image: -moz-linear-gradient(top, #ec7f7f, #e72323);
+    background-image: -ms-linear-gradient(top, #ec7f7f, #e72323);
+    background-image: -o-linear-gradient(top, #ec7f7f, #e72323);
+    background-image: linear-gradient(to bottom, #ec7f7f, #e72323);
+    -webkit-border-radius: 5;
+    -moz-border-radius: 5;
+    border-radius: 5px;
+    border: none;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+}
+
+.fight-button:hover {
+    background-image: -webkit-linear-gradient(top, #e72323, #ec7f7f);
+    background-image: -moz-linear-gradient(top, #e72323, #ec7f7f);
+    background-image: -ms-linear-gradient(top, #e72323, #ec7f7f);
+    background-image: -o-linear-gradient(top, #e72323, #ec7f7f);
+    background-image: linear-gradient(to bottom, #e72323, #ec7f7f);
+}
+
+.new-match {
+    background-image: -webkit-linear-gradient(top, #e9d48e, #e2b31a);
+    background-image: -moz-linear-gradient(top, #e9d48e, #e2b31a);
+    background-image: -ms-linear-gradient(top, #e9d48e, #e2b31a);
+    background-image: -o-linear-gradient(top, #e9d48e, #e2b31a);
+    background-image: linear-gradient(to bottom, #e9d48e, #e2b31a);
+    -webkit-border-radius: 5;
+    -moz-border-radius: 5;
+    border-radius: 5px;
+    border: solid 1px #a78208;
+    font-family: Arial;
+    color: #000;
+    font-size: 12px;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+}
+
+.new-match:hover {
+    background-image: -webkit-linear-gradient(top, #e2b31a, #e9d48e);
+    background-image: -moz-linear-gradient(top, #e2b31a, #e9d48e);
+    background-image: -ms-linear-gradient(top, #e2b31a, #e9d48e);
+    background-image: -o-linear-gradient(top, #e2b31a, #e9d48e);
+    background-image: linear-gradient(to bottom, #e2b31a, #e9d48e);
+}
+
+/* ++++++++++++++++ Radio Button div +++++++++++++++++++*/
+
+h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.change-radio-buttons-container {
+    position: fixed;
+    top:-250px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 8px 0px;
+}
+
+.radio-button {
+    font-size: 1rem;
+    width: 200px;
+    height: auto;
+    margin: 0px 10px;
+}
+
+input {
+    display: block;
+    margin: 5px auto;
+}
+
+/* ++++++++++++++ Fight Div +++++++++++++++++ */
+
+.fight-container h2 {
+    margin-bottom: 15px;
+}
+
+.fight-container {
+    background-color: #ffe79a;
+    width: 100%;
+    height: auto;
+    padding-bottom: 100px;
+}
+
+.name-and-button-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: flex-start;
+}
+
+.button-fight-event-container {
+    width: 350px;
+    margin: 35px 25px 0px 25px;
+}
+
+.continue-match-text {
+    display: block;
+    background-color: #788edb;
+    padding: 6px;
+    margin-bottom: 10px;
+} 
+
+.final-victory {
+    display: block;
+    background-color: #38c038;
+    padding: 6px;
+}
+
+.final-defeat {
+    display: block;
+    background-color: #e63131;
+    padding: 6px;
+}
+
+.player-info-container, .enemy-info-container {
+    width: 225px;
+}
+
+
+.drop-box, .enemy-card-container{
+    margin: 15px 25px;
+    border-radius: 10px;
+    border: #2f3e75 1px dashed;
+    width: 225px;
+    height: 300px;
+}
+
+.enemy-card-container {
+    border: none;
+}
+
+.fight-info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #f8de8a;
+    margin-top: 10px;
+    border: #b6962f 2px solid;
+    min-height: 300px; 
+    min-width: 350px;
+}
+
+.speed-setting {
+    margin-top: 10px;
+}
+
+
+.speed-setting p {
+    display: inline-block;
+    margin: 0px 5px;
+}
+
+.speed-setting p:hover {
+    cursor: pointer ;
+}
+
+
+.normal-speed {
+    font-weight: bold;
+}
+
+.fight-enemy-attack-text {
+    padding: 6px 0px;
+    background-color: #f56060;
+    border-bottom: solid rgb(41, 41, 41) 3px;
+}
+
+.fight-player-attack-text {
+    padding: 6px 0px;
+    background-color: #94abf7;
+    border-bottom: solid rgb(41, 41, 41) 3px;
+}
+
+.fight-ended-text {
+    padding: 12px 6px;
+    font-weight: 900;
+    background-color: #ebcd6e;
+    border-bottom: solid rgb(41, 41, 41) 3px;
+}
+
+.global-score-container {
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+
+.global-score-player, .global-score-enemy {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+/* +*+*+*+*+*+*+*+ Test drag drop +*+*+*+*+*+*+*+*+ */
+
+.invisible {
+    display: none;
+}
+
+

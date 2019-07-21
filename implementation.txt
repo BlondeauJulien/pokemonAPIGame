@@ -1,0 +1,21 @@
+
+strenght weakness chart
+https://www.ign.com/wikis/pokemon-diamond-pearl-platinum-version/Pokemon_Types,_Strengths_&_Weaknesses
+
+
+
+[X] change card you don't want (once)
+[X] then a pokemon enemy appear
+[X] drag the pokemon you want to fight with
+[X] click fight
+[X] get a fight reveiw with the winner and score 
+[X] click next fight
+[X] repeat
+
+
+
+[] badge 1 after first victory? secnd 5 victory? ...
+
+
++-++--+-+-+-+-+-+ BUGs +--+-+-+-++-
+[] While in adaptative view, cards disapear when dragged
